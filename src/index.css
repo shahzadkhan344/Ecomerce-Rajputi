@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@keyframes moveTopToBottom {
+    0% {
+        top: 0;
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 1);
+    }
+
+    100% {
+        top: 100%;
+        opacity: 0;
+        background-color: rgba(255, 255, 255, 0.5);
+    }
+}
+
+.anuj {
+    animation: moveTopToBottom 5s linear infinite;
+    position: absolute;
+    border-radius: 100%;
+}
+
