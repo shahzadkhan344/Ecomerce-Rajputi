@@ -1,6 +1,5 @@
 import React from 'react'
-import Container from './components/Container'
-import { createBrowserRouter, RouterProvider } from 'react-router'
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import All from './pages/All'
 import Saress from './pages/Saress'
@@ -18,70 +17,25 @@ import Login from './pages/Login'
 import Successfully from './pages/Successfully'
 
 export default function App() {
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />
-    },
-    {
-      path: "/all",
-      element: <All />
-    },
-    {
-      path: "/saress",
-      element: <Saress />
-    },
-    {
-      path: "/lehnga",
-      element: <Lehnaga />
-    },
-    {
-      path: "/chunripila",
-      element: <ChunriPila />
-    },
-    {
-      path: "/suits",
-      element: <Suits />
-    },
-    {
-      path: "/dupatta",
-      element: <Dupatta />
-    },
-    {
-      path: "/kurtis",
-      element: <Kurtis />
-    },
-    {
-      path: "/indowestron",
-      element: <IndoWestron />
-    },
-    {
-      path: "/reviews",
-      element: <Reviews />
-    },
-    {
-      path: "/trackorder",
-      element: <TrackOrder />
-    }
-    ,
-    {
-      path: "/detailspage",
-      element: <Detailspage />
-    },
-    {
-      path: "/addtocart",
-      element: <AddToCart />
-    },
-    {
-      path: "/login",
-      element: <Login />
-    },
-    {
-      path: "/successfully",
-      element: <Successfully />
-    }
-  ])
   return (
-    <RouterProvider router={router} />
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/all" element={<All />} />
+        <Route path="/saress" element={<Saress />} />
+        <Route path="/lehnga" element={<Lehnaga />} />
+        <Route path="/chunripila" element={<ChunriPila />} />
+        <Route path="/suits" element={<Suits />} />
+        <Route path="/dupatta" element={<Dupatta />} />
+        <Route path="/kurtis" element={<Kurtis />} />
+        <Route path="/indowestron" element={<IndoWestron />} />
+        <Route path="/reviews" element={<Reviews />} />
+        <Route path="/trackorder" element={<TrackOrder />} />
+        <Route path="/detailspage" element={<Detailspage />} />
+        <Route path="/addtocart" element={<AddToCart />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/successfully" element={<Successfully />} />
+      </Routes>
+    </Router>
   )
 }
